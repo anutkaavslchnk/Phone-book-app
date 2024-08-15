@@ -1,0 +1,19 @@
+.wrapper{
+background-color:cornflowerblue;
+padding:15px;
+display:flex;
+justify-content: center;
+
+}
+.list{
+display:flex;
+justify-content: center;
+gap:20px;
+list-style-type: none;
+
+}
+.item{
+  text-decoration: none;  
+  color:black;
+  font-weight: 700;
+}
