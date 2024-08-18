@@ -1,14 +1,24 @@
 import { Field, Form, Formik } from "formik";
-import { NavLink } from "react-router-dom";
+import { Navigate, NavLink } from "react-router-dom";
+import { LogInThunk } from "../../redux/auth/operations";
+import { useDispatch, useSelector } from "react-redux";
+import { selectIsLoggedIn } from "../../redux/auth/selectors";
 
 
 const SignIn = () => {
+    const dispatch=useDispatch();
+    const login=useSelector(selectIsLoggedIn);
     const initialValues={
         email:'',
         password:'',
     }
-    const handleSubmit=values=>{
+    const handleSubmit=(values, options)=>{
+        dispatch(LogInThunk(values));
 console.log(values);
+options.resetForm();
+    }
+    if(login){
+     return <Navigate to='/'/>
     }
   return (
     <div>
@@ -17,12 +27,12 @@ console.log(values);
 <Form>
 
     <Field name='email'  placeholder="Please type the email"></Field>
-    <Field name='password'  placeholder="Please type the password"></Field>
+    <Field name='password' type='password' placeholder="Please type the password"></Field>
 
 
-    <button>Sign up</button>
+    <button type="submit">Sign in</button>
 
-    <p>You don't have the account yet? <NavLink to='/signup'>SignUp</NavLink></p>
+    <p>You don't have the account yet? <NavLink to='/register'>SignUp</NavLink></p>
 </Form>
 
     </Formik>

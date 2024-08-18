@@ -1,15 +1,19 @@
 import { Field, Form, Formik } from "formik";
+import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
+import {  RegisterThunk } from "../../redux/auth/operations";
 
 
 const SignUp = () => {
+    const dispatch=useDispatch();
     const initialValues={
         name:'',
         email:'',
         password:'',
     }
-    const handleSubmit=values=>{
-console.log(values);
+    const handleSubmit=(values,options)=>{
+        dispatch(RegisterThunk(values));
+options.resetForm();
     }
   return (
     <div>
@@ -21,9 +25,9 @@ console.log(values);
     <Field name='password'  placeholder="Please type the password"></Field>
 
 
-    <button>Sign up</button>
+    <button  type="submit">Sign up</button>
 
-    <p>You already have account? <NavLink to='/signin'>SignIn</NavLink></p>
+    <p>You already have account? <NavLink to='/login'>SignIn</NavLink></p>
 </Form>
 
     </Formik>

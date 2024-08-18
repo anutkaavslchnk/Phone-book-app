@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { nanoid } from "nanoid";
 import { IoAddCircleOutline } from "react-icons/io5";
-import { addContact } from "../../redux/contactsOps";
+import { addContact } from "../../redux/contacts/contactsOps";
+
 
 const FeedbackSchema = Yup.object({
   username: Yup.string().required("Required").min(3, "Too short!").max(50, 'Too long!'),

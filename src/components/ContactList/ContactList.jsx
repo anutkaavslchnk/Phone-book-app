@@ -5,8 +5,10 @@ import Contact from "../Contact/Contact";
 import s from './ContactList.module.css';
 import { selectContacts, selectIsError, selectIsLoading, selectNameFilter } from "../../redux/selectors";
 import { useEffect } from "react";
-import { fetchContacts } from "../../redux/contactsOps";
-import { selectFilteredContacts } from "../../redux/contactsSlice";
+
+
+import { fetchContacts } from "../../redux/contacts/contactsOps";
+import { selectFilteredContacts } from "../../redux/contacts/contactsSlice";
 
 const ContactList = () => {
 

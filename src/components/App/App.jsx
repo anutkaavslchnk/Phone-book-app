@@ -12,6 +12,7 @@ import SignIn from '../../pages/SignIn/SignIn';
 import NotFound from '../../pages/NotFound/NotFound';
 import { fetchContacts } from '../../redux/contacts/contactsOps';
 import Home from '../../pages/Home/Home';
+import Contacts from '../Contacts/Contacts';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -27,12 +28,12 @@ const App = () => {
 <Routes>
 <Route path="/" element={<Layout></Layout>}>
 
-<Route index element={<Home></Home>}></Route>
-
+<Route index element={<Home></Home>}/>
+<Route path="/contacts" element={<Contacts></Contacts>}/>
 </Route>
-<Route path="/signup" element={<SignUp></SignUp>}></Route>
-<Route path="/signin" element={<SignIn></SignIn>}></Route>
-<Route path="/contacts" element={<></>}></Route>
+<Route path="/register" element={<SignUp></SignUp>}></Route>
+<Route path="/login" element={<SignIn></SignIn>}></Route>
+
 <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
 </>

@@ -4,10 +4,10 @@ import Header from "../Header/Header";
 
 const Layout = () => {
   return (
-    <>
-    <Header></Header>
-    <Outlet></Outlet>
-    </>
+    <div>
+    <Header/>
+    <Outlet/>
+    </div>
   )
 };
 
