@@ -14,8 +14,8 @@ const Header = () => {
   
 
   return (
-    <header className={s.wrappper}>
-      <h3>{login ? user.name : "Guest"}</h3>
+    <header className={s.wrapper}>
+      <h3>{login ? user.name : ""}</h3>
       <ul className={s.list}>
         <li><NavLink className={s.item} to="/">Home</NavLink></li>
         {!login ? (

@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectIsLoggedIn } from "../../redux/auth/selectors";
 
 
-const SignIn = () => {
+const LoginPage = () => {
     const dispatch=useDispatch();
     const login=useSelector(selectIsLoggedIn);
     const initialValues={
@@ -40,4 +40,4 @@ options.resetForm();
   )
 };
 
-export default SignIn;
+export default LoginPage;

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import {  registerThunk } from "../../redux/auth/operations";
 
 
-const SignUp = () => {
+const RegistrationPage = () => {
     const dispatch=useDispatch();
     const initialValues={
         name:'',
@@ -35,5 +35,5 @@ options.resetForm();
   )
 };
 
-export default SignUp;
+export default RegistrationPage;
 

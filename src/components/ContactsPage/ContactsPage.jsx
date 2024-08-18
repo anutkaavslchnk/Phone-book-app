@@ -4,7 +4,7 @@ import s from './Contacts.module.css';
 import ContactForm from '../ContactForm/ContactForm';
 import ContactList from '../ContactList/ContactList';
 import SearchBox from '../SearchBox/SearchBox';
-const Contacts = () => {
+const ContactsPage = () => {
   return (
     <div className={s.container}>
     <h1 className={s.main}>My Contacts</h1>
@@ -16,4 +16,4 @@ const Contacts = () => {
   )
 }
 
-export default Contacts;
+export default ContactsPage;
