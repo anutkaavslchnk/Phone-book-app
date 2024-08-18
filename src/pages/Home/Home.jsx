@@ -2,7 +2,7 @@
 
 const Home = () => {
   return(
-    <>Home page</>
+    <>Welcome to the the contact book app!</>
   )
 };
 

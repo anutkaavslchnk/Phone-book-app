@@ -1,7 +1,7 @@
 import { Field, Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
-import {  RegisterThunk } from "../../redux/auth/operations";
+import {  registerThunk } from "../../redux/auth/operations";
 
 
 const SignUp = () => {
@@ -12,7 +12,7 @@ const SignUp = () => {
         password:'',
     }
     const handleSubmit=(values,options)=>{
-        dispatch(RegisterThunk(values));
+        dispatch(registerThunk(values));
 options.resetForm();
     }
   return (

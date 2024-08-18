@@ -1,6 +1,6 @@
 import { Field, Form, Formik } from "formik";
 import { Navigate, NavLink } from "react-router-dom";
-import { LogInThunk } from "../../redux/auth/operations";
+import { logInThunk } from "../../redux/auth/operations";
 import { useDispatch, useSelector } from "react-redux";
 import { selectIsLoggedIn } from "../../redux/auth/selectors";
 
@@ -13,8 +13,8 @@ const SignIn = () => {
         password:'',
     }
     const handleSubmit=(values, options)=>{
-        dispatch(LogInThunk(values));
-console.log(values);
+        dispatch(logInThunk(values));
+
 options.resetForm();
     }
     if(login){

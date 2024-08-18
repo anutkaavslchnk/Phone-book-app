@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { LogInThunk, LogOutThunk, RegisterThunk } from "./operations";
+import { getMeThunk, logInThunk, logOutThunk, registerThunk } from "./operations";
 
 
 const initialState={
     user: {
-      name: null,
-      email: null,
+      name: '',
+      email: '',
     },
     token: '',
     isLoggedIn: false,
@@ -16,21 +16,35 @@ name:'auth',
 initialState,
 extraReducers:builder=>{
   builder
-  .addCase(LogInThunk.fulfilled, (state, action)=>{
+  .addCase(logInThunk.fulfilled, (state, action)=>{
     state.user=action.payload.user;
     state.token=action.payload.token;
     state.isLoggedIn=true;
+    state.isRefreshing = false;
  
   })
-  .addCase(RegisterThunk.fulfilled, (state, action)=>{
+  .addCase(registerThunk.fulfilled, (state, action)=>{
     state.user=action.payload.user;
     state.token=action.payload.token;
     state.isLoggedIn=true;
+    state.isRefreshing = false;
  
 
   })
-  .addCase(LogOutThunk.fulfilled, ()=>{
+  .addCase(logOutThunk.fulfilled, ()=>{
     return initialState;
+  })
+  .addCase(getMeThunk.fulfilled,(state, action)=>{
+    state.isLoggedIn=true;
+    state.isRefreshing = false; 
+    state.user.name=action.payload.name;
+    state.user.email=action.payload.email;
+  })
+  .addCase(getMeThunk.pending,(state, action)=>{
+    state.isRefreshing=true;
+  })
+  .addCase(getMeThunk.rejected,(state, action)=>{
+    state.isRefreshing=false;
   })
 }
 });
