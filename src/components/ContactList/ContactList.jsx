@@ -3,7 +3,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import Contact from "../Contact/Contact";
 import s from './ContactList.module.css';
-import { selectContacts, selectIsError, selectIsLoading, selectNameFilter } from "../../redux/selectors";
+import {  selectFilter, selectIsError, selectIsLoading } from "../../redux/selectors";
 import { useEffect } from "react";
 
 
@@ -12,7 +12,7 @@ import { selectFilteredContacts } from "../../redux/contacts/contactsSlice";
 
 const ContactList = () => {
 
- const filter = useSelector(selectNameFilter);
+ const filter = useSelector(selectFilter);
 
 
   const filteredContacts = useSelector(selectFilteredContacts);

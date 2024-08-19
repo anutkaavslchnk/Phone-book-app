@@ -1,0 +1,16 @@
+.count{
+    position: fixed;
+	inset: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.modal{
+    position:relative;
+background-color: white;
+padding: 20px;
+overflow: hidden;
+
+border-radius: 5px;
+}

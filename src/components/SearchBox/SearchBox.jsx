@@ -12,7 +12,7 @@ const SearchBox = ()=>{
   return (
     <div className={s.form}>
     
-    <input onChange={(e)=>dispatch(changeFilter(e.target.value))} className={s.input}name="text" id={idishki} placeholder="Search contacts by name"></input>
+    <input onChange={(e)=>dispatch(changeFilter(e.target.value))} className={s.input}name="text" id={idishki} placeholder="Search contacts by name and by number"></input>
     </div>
   )
 };

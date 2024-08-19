@@ -8,6 +8,7 @@ import { api } from "../../config/api";
 
 
 
+
 export const fetchContacts = createAsyncThunk('contacts/fetchAll', async (_, thunkAPI) => {
   try {
     const { data } = await  api.get('contacts');
@@ -28,7 +29,7 @@ export const logOutThunk=createAsyncThunk('auth/logout', async(credentials, thun
 export const deleteContact = createAsyncThunk('contacts/deleteContact', async (contactId, thunkAPI) => {
   try {
     await api.delete(`contacts/${contactId}`);
-    return id;  
+    return contactId;  
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
   }
@@ -37,6 +38,8 @@ export const deleteContact = createAsyncThunk('contacts/deleteContact', async (c
 export const addContact = createAsyncThunk('contacts/addContact', async (body, thunkAPI) => {
   try {
     const { data } = await api.post('contacts', body);
+
+
     return data; 
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
