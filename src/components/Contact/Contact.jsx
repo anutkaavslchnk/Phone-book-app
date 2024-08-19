@@ -4,9 +4,10 @@ import s from "../ContactList/ContactList.module.css";
 import { useDispatch } from "react-redux";
 
 import { RiDeleteBin5Line } from "react-icons/ri";
-import { deleteContact } from "../../redux/contacts/contactsOps";
+
 import Modal from "../Modal/Modal";
 import { useState } from "react";
+import { deleteContact } from "../../redux/contacts/operations";
 
 
 const Contact = ({ id, name, number }) => {

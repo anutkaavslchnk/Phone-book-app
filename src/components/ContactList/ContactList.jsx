@@ -7,8 +7,9 @@ import {  selectFilter, selectIsError, selectIsLoading } from "../../redux/selec
 import { useEffect } from "react";
 
 
-import { fetchContacts } from "../../redux/contacts/contactsOps";
+
 import { selectFilteredContacts } from "../../redux/contacts/contactsSlice";
+import { fetchContacts } from "../../redux/contacts/operations";
 
 const ContactList = () => {
 

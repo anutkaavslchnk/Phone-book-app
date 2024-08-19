@@ -1,6 +1,6 @@
 import { createSelector, createSlice } from "@reduxjs/toolkit";
 
-import { addContact, deleteContact, fetchContacts} from "./contactsOps";
+import { addContact, deleteContact, fetchContacts} from "./operations";
 import { selectContacts, selectFilter } from "../selectors";
 import toast, { Toaster } from "react-hot-toast";
 

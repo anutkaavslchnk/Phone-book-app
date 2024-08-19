@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { nanoid } from "nanoid";
 import { IoAddCircleOutline } from "react-icons/io5";
-import { addContact } from "../../redux/contacts/contactsOps";
+import { addContact } from "../../redux/contacts/operations";
+
 
 
 const FeedbackSchema = Yup.object({
