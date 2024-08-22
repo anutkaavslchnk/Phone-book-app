@@ -43,9 +43,7 @@ const contactsSlice = createSlice({
      state.isError=true;
      toast.error('Sorry, something went wrong, try again!');
     })
-    .addCase(logOutThunk.fulfilled, ()=>{
-      return initialState;
-    })
+  
   }
 });
 

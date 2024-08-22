@@ -20,7 +20,7 @@ const UserMenu = () => {
 
     
      
-          <li><NavLink className={s.item} to="/contacts">Contacts</NavLink></li>
+          
           <li>
             <button onClick={() => dispatch(logOutThunk())}>Exit</button>
           </li>
