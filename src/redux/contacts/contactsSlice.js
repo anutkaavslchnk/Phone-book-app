@@ -1,6 +1,6 @@
 import { createSelector, createSlice } from "@reduxjs/toolkit";
 
-import { addContact, deleteContact, fetchContacts} from "./operations";
+import { addContact, deleteContact, fetchContacts, logOutThunk} from "./operations";
 import { selectContacts, selectFilter } from "../selectors";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -42,6 +42,9 @@ const contactsSlice = createSlice({
     .addCase(deleteContact.rejected,(state, action)=>{
      state.isError=true;
      toast.error('Sorry, something went wrong, try again!');
+    })
+    .addCase(logOutThunk.fulfilled, ()=>{
+      return initialState;
     })
   }
 });

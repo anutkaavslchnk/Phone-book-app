@@ -1,56 +1,28 @@
-import { useEffect, useState } from 'react';
-
-import s from './AppBar.module.css'
-
-import { useDispatch, useSelector } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
-import Layout from '../Layout/Layout';
-
-import NotFound from '../../pages/NotFound/NotFound';
-
-import { getMeThunk } from '../../redux/auth/operations';
-import { PrivateRoute } from '../../Routes/PrivateRoute';
-import {  RestrictedRoute } from '../../Routes/RestrictedRoute';
-import { selectIsRefresh } from '../../redux/auth/selectors';
-import Loader from '../Loader/Loader';
-import HomePage from '../../pages/HomePage/HomePage';
-import RegistrationPage from '../../pages/RegistrationPage/RegistrationPage';
-import LoginPage from '../../pages/LoginPage/LoginPage';
-import ContactsPage from '../ContactsPage/ContactsPage';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { selectIsLoggedIn, selectIsRefresh } from "../../redux/auth/selectors";
+import { getMeThunk } from "../../redux/auth/operations";
+import AuthNav from "../AuthNav/AuthNav";
+import Loader from "../Loader/Loader";
+import UserMenu from "../UserMenu/UserMenu";
+import Navigation from "../Navigation/Navigation";
 
 const AppBar = () => {
-  const dispatch = useDispatch();
-const refreshUser =useSelector(selectIsRefresh);
+    const dispatch = useDispatch();
+    const refreshUser = useSelector(selectIsRefresh);
+    const isLoggedIn = useSelector(selectIsLoggedIn);
+    
+    useEffect(() => {
+      dispatch(getMeThunk());
+    }, [dispatch]); 
   
-  useEffect(() => {
-    dispatch(getMeThunk());
-  }, [dispatch]); 
-
-  return refreshUser  ? <Loader/>: (
-
-<>
-
-<Routes>
-<Route path="/" element={<Layout></Layout>}>
-
-<Route index element={<HomePage></HomePage>}/>
-<Route path="contacts" element={
-
- <PrivateRoute>
-    <ContactsPage/>
-  </PrivateRoute>
-
-  }
-  />
-  </Route>
-<Route path="/register" element={ <RestrictedRoute><RegistrationPage></RegistrationPage></RestrictedRoute>}></Route>
-<Route path="/login" element={ <RestrictedRoute><LoginPage></LoginPage></RestrictedRoute>}></Route>
-
-<Route path="*" element={<NotFound></NotFound>}></Route>
-      </Routes>
-</>
-   
-  );
+    return refreshUser ? <Loader/> : (
+      <header>
+        <Navigation>      </Navigation>
+        {isLoggedIn ? <UserMenu /> : <AuthNav />}
+     
+      </header>
+    );
 };
 
 export default AppBar;

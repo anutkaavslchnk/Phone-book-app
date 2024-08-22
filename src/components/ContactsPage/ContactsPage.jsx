@@ -1,5 +1,5 @@
 
-import s from './Contacts.module.css';
+import s from './ContactsPage.module.css';
 
 import ContactForm from '../ContactForm/ContactForm';
 import ContactList from '../ContactList/ContactList';

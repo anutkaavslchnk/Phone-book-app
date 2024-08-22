@@ -15,22 +15,20 @@ const UserMenu = () => {
 
   return (
     <header className={s.wrapper}>
-    <h3>{login ? user.name : ""}</h3>
+    <h3>{login ? user.name : "Please log in"}</h3>
     <ul className={s.list}>
-      <li><NavLink className={s.item} to="/">Home</NavLink></li>
-      {login ? (
-        <>
+
+    
+     
           <li><NavLink className={s.item} to="/contacts">Contacts</NavLink></li>
           <li>
             <button onClick={() => dispatch(logOutThunk())}>Exit</button>
           </li>
-        </>
-      ) : (
-        <>
-          <li><NavLink className={s.item} to='/login'>Sign in</NavLink></li>
-          <li><NavLink className={s.item} to='/register'>Sign up</NavLink></li>
-        </>
-      )}
+   
+      
+          
+    
+      
     </ul>
   </header>
   );
