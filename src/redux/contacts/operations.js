@@ -17,14 +17,7 @@ export const fetchContacts = createAsyncThunk('contacts/fetchAll', async (_, thu
     return thunkAPI.rejectWithValue(error.message);
   }
 });
-export const logOutThunk=createAsyncThunk('auth/logout', async(credentials, thunkAPI)=>{
-  try {
-    await api.post("users/logout", credentials);
-  setCleanToken();
-  } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-  }
-})
+
 
 export const deleteContact = createAsyncThunk('contacts/deleteContact', async (contactId, thunkAPI) => {
   try {
