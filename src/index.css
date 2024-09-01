@@ -4,7 +4,8 @@ body {
   background-color:  rgb(255, 255, 255);
   font-family: 'Nunito', 'sens-serif';
     color:black;
-   
+    margin: 0;
+    padding: 0;
   }
   
   h1,

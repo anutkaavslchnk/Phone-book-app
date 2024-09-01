@@ -17,3 +17,11 @@ list-style-type: none;
   color: white;
   font-weight: 700;
 }
+.exit{
+  border:none;
+background-color:transparent;
+color:red;
+font-weight: 700;
+font-size: 20px;
+
+}

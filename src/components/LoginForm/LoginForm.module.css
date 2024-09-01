@@ -1,0 +1,49 @@
+.form{
+   display: flex;
+   flex-direction: column;
+   gap:20px;
+ 
+   width: 25vw;
+   margin: 20% auto;
+   padding:15px;
+   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+   border-radius: 10px;
+   background-color:antiquewhite;
+   
+}
+.title{
+    text-align: center;
+    color:black;
+    font-weight: 500;
+}
+.field{
+    padding: 10px;
+    border:none;
+    border-radius:5px;
+width: 280px;
+margin: 0 auto;
+}
+.btn{
+    border:none;
+    cursor:pointer;
+    padding:10px;
+    background-color:lightgray;
+    width:150px;
+    margin: 0 auto;
+    border-radius:10px;
+    color:white;
+    font-weight: 700;
+}
+.btn:hover{
+    background-color: white;
+    color:black;
+}
+.parag{
+    color:gray;
+    
+}
+.way{
+ text-decoration: none;
+ color:black;
+ font-weight: 700;
+}

@@ -3,7 +3,7 @@ import { registerThunk } from "../../redux/auth/operations";
 import { Field, Form, Formik } from "formik";
 import { NavLink } from "react-router-dom";
 
-
+import s from './RegistrationForm.module.css'
 const RegistrationForm = () => {
     const dispatch=useDispatch();
     const initialValues={
@@ -19,15 +19,16 @@ options.resetForm();
     <div>
     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
 
-<Form>
-<Field name='name' placeholder="Please type the name"></Field>
-    <Field name='email'  placeholder="Please type the email"></Field>
-    <Field name='password'  placeholder="Please type the password"></Field>
+<Form className={s.form}>
+<h2 className={s.title}>Sign up</h2>
+<Field  className={s.field}name='name' placeholder="Please type the name"></Field>
+    <Field className={s.field} name='email'  placeholder="Please type the email"></Field>
+    <Field className={s.field} name='password'  placeholder="Please type the password"></Field>
 
 
-    <button  type="submit">Sign up</button>
+    <button  className={s.btn} type="submit">Sign up</button>
 
-    <p>You already have account? <NavLink to='/login'>SignIn</NavLink></p>
+    <p className={s.parag}>You already have account? <NavLink  className={s.way} to='/login'>SignIn</NavLink></p>
 </Form>
 
     </Formik>

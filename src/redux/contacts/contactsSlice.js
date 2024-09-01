@@ -40,12 +40,12 @@ const contactsSlice = createSlice({
         state.isError = true;
         toast.error('Sorry, something went wrong, try again!');
       })
-      .addCase(logOutThunk.fulfilled, state => {
+      .addCase(logOutThunk.fulfilled, () => {
         toast.success('Success');
        return initialState;
        
       })
-      .addCase(logOutThunk.rejected, state => {
+      .addCase(logOutThunk.rejected, (state) => {
         state.isError = true;
         toast.error('Please try again.');
       })

@@ -22,7 +22,7 @@ const UserMenu = () => {
      
           
           <li>
-            <button onClick={() => dispatch(logOutThunk())}>Exit</button>
+            <button className={s.exit} onClick={() => dispatch(logOutThunk())}>Exit</button>
           </li>
    
       
