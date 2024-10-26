@@ -20,7 +20,7 @@
      padding: 10px;
      border:none;
      border-radius:5px;
- width: 280px;
+ width: 200px;
  margin: 0 auto;
  }
  .btn{
@@ -47,3 +47,31 @@
   color:black;
   font-weight: 700;
  }
+
+
+
+ @media (max-width: 768px) {
+    .form {
+      width: 95%;
+      margin: 5% auto;
+    }
+  
+    .btn {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .form {
+      padding: 10px;
+    }
+  
+    .field, .btn {
+      width: 100%;
+      padding: 8px;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+    }
+  }
