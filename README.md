@@ -1,8 +1,29 @@
-# React + Vite
+# Phone book app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An intuitive application where users can manage their personal phone books. Each user has a secure account with the ability to register, log in, and create their own contact list.
+-------------------------------------------------
 
-Currently, two official plugins are available:
+## User Authentication:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Registration Form: Allows new users to create an account
+- Login Form: Secure login for existing users.
+-------------------------------------------------
+
+## Phone Book Management:
+
+* Create and delete contacts.
+* Store each user's contacts securely, ensuring data privacy.
+-------------------------------------------------
+
+## Used Technologies
+
+Frontend:
+* React: Component-based UI development.
+* Redux: State management for user authentication and contacts.
+* CSS: Styling to create a visually appealing interface.
+Hosting:
+* Vercel: Fast and reliable deployment.
+  
+Development Environment:
+* Vite: For a modern and fast development experience with Hot Module Replacement (HMR).
+* ESLint: Code linting to maintain consistent and error-free code.
