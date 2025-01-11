@@ -15,14 +15,14 @@ const UserMenu = () => {
 
   return (
     <header className={s.wrapper}>
-    <h3>{login ? user.name : "Please log in"}</h3>
+    <h3>User  {login ? user.name : "Please log in"}</h3>
     <ul className={s.list}>
 
     
      
           
           <li>
-            <button className={s.exit} onClick={() => dispatch(logOutThunk())}>Exit</button>
+            <button className={s.exit} onClick={() => dispatch(logOutThunk())}>Log out</button>
           </li>
    
       

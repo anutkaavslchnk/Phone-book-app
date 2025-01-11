@@ -3,7 +3,7 @@
    flex-direction: column;
    gap:20px;
  
-   width: 25vw;
+   width: 400px;
    margin: 20% auto;
    padding:15px;
    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -49,10 +49,7 @@ margin: 0 auto;
 }
 
 @media (max-width: 768px) {
-    .form {
-      width: 95%;
-      margin: 5% auto;
-    }
+
   
     .btn {
       max-width: 100%;
@@ -60,9 +57,7 @@ margin: 0 auto;
   }
   
   @media (max-width: 480px) {
-    .form {
-      padding: 10px;
-    }
+
   
     .field, .btn {
       width: 100%;

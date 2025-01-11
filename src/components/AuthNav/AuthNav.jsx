@@ -10,7 +10,7 @@ const AuthNav = () => {
     <li><NavLink className={s.item} to='/register'>Sign up</NavLink></li>
   </ul>
   </div>
-   <div className={s.line}></div>
+ 
    </>
   )
 };

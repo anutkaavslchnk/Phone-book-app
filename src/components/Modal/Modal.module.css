@@ -14,3 +14,22 @@ overflow: hidden;
 
 border-radius: 5px;
 }
+.btn{
+	border:1px solid black;
+	cursor:pointer;
+	padding:5px;
+	background-color:transparent;
+	
+	margin: 0 auto;
+	margin-right: 4px;
+	border-radius:20px;
+	color:black;
+	font-weight: 700;
+}
+.btn:hover{
+	background-color: black;
+	color:white;
+}
+.sure{
+	margin-bottom: 10px;
+}

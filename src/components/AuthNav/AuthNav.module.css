@@ -11,13 +11,14 @@
       font-weight: 700;
     }
     .cont{
-  
+  border-radius: 20px;
 padding:15px;
 display:flex;
 background-color:lightblue;
 background-size:auto;
 justify-content: center;
-width:100%;
+margin:0 auto;
+width:400px;
     }
 .line{
     width:100%;

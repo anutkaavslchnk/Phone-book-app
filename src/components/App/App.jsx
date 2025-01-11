@@ -7,7 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 import Layout from '../Layout/Layout';
 
 import NotFound from '../../pages/NotFound/NotFound';
-
+import s from './App.module.css';
 import { getMeThunk } from '../../redux/auth/operations';
 import { PrivateRoute } from '../../Routes/PrivateRoute';
 import {  RestrictedRoute } from '../../Routes/RestrictedRoute';
@@ -19,17 +19,12 @@ import LoginPage from '../../pages/LoginPage/LoginPage';
 import ContactsPage from '../ContactsPage/ContactsPage';
 
 const App = () => {
-//   const dispatch = useDispatch();
-// const refreshUser =useSelector(selectIsRefresh);
-  
-//   useEffect(() => {
-//     dispatch(getMeThunk());
-//   }, [dispatch]); 
+
 
   return  (
 
 <>
-
+<div className={s.line}>
 <Routes>
 <Route path="/" element={<Layout></Layout>}>
 
@@ -48,6 +43,7 @@ const App = () => {
 
 <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+      </div>
 </>
    
   );
